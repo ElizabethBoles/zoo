@@ -28,9 +28,20 @@
       }
       return numbOfEggs;
     }
+    roar(noise){
+      return `${this.name} just roared ${noise}!!!!!!`;
+    }
+    toString() {//method that returns a string underneath
+      return`This animal is a ${window.zoo.Dinosaur.getScientificName()}`;
+      //calling the fn to figure out the species
+    }
   };
   let dino = new window.zoo.Dinosaur('T-rex', new Date('01,01,2010'));
   console.log(dino);//new dino above
   console.log(dino.layEggs());//created a baby here
   console.log(window.zoo.Dinosaur.getScientificName());//dinosauria
+  console.log(dino.roar('RAWR!!!'));
+  console.log(dino.toString());
+
+
 }());
