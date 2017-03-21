@@ -16,6 +16,11 @@ window.zoo.Dinosaur = class Dinosaur extends Animal{//creating a dinosaur class 
   static getScientificName() {
     return 'Dinosauria';
   }
+
+/**
+ * [Returns a number of objects with a count determined between 1-10]
+ * @return {array} [description]
+ */
   layEggs(){
     //construct new dinos return the # of new dinos i created
     //Math.random()

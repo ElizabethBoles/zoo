@@ -1,4 +1,4 @@
-## Zoo
+### Zoo
 
 This project was created for Iron Yard Students to practice with writing classes,
 constructor functions, and methods.
