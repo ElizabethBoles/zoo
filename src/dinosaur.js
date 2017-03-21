@@ -3,6 +3,11 @@
   window.zoo = window.zoo || {};
   let Animal = window.zoo.Animal;
 
+  /**
+   * [Blue print/construction of dinosaur class which is an extension of animal class
+   * needs to be provided with name and dob]
+   * @type {Dinosaur}
+   */
   window.zoo.Dinosaur = class Dinosaur extends Animal{//creating a dinosaur class which is
     constructor(name, dateOfBirth) {//extend is sub class of parent class
       //letting the dinosaur class know that we want to also construct its
@@ -18,8 +23,8 @@
     }
 
     /**
-    * [Returns a number of objects with a count determined between 1-10]
-    * @return {array} [description]
+    * [Returns a number of dinosaur eggs created with a count determined between 1-10]
+    * @return {number}
     */
     layEggs(){
       //construct new dinos return the # of new dinos i created
@@ -38,7 +43,12 @@
       //}
       return numbOfEggs;
     }
-    roar(noise){//used typeof because needed to test data type
+    /**
+     * [creates a roar noise for a particular dinosaur]
+     * @param  {string}     noise
+     * @return {string}
+     */
+     roar(noise){//used typeof because needed to test data type
       if(typeof noise !== 'string'){//if type of noise not a string
         let theError = new TypeError('Arguement provided was not a string, need a string');//threw a type error here
         theError.errorCode = 418;
@@ -46,8 +56,13 @@
       }
 
 
-      return `${this.name} just roared ${noise}!!!!!!`;
+      return `${this.name} just roared ${noise}!!!!!!`;//put this arg in a string down here
+      //would look wierd if it was anything else then a string
     }
+    /**
+     * [Creates information about the dinosaur]
+     * @return {string}
+     */
     toString() {//method that returns a string underneath
       return`This animal is a ${window.zoo.Dinosaur.getScientificName()}`;
       //calling the fn to figure out the species
