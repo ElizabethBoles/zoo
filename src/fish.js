@@ -19,6 +19,11 @@
       return numbOfEggs;
     }
     splash(noise){
+      if(typeof noise !== 'string'){
+        let theError = new TypeError('Need it to be a string for this to work');
+        theError.errorCode = 418;
+        throw theError;
+      }
       return `${this.name} just splashed ${noise}!!!!!!`;
     }
     toString() {
