@@ -28,9 +28,9 @@
       });
       it('should throw an error when i try to create a new name for an animal with an array', function(){
         try {
-         let newAnimal = new window.zoo.Animal('annyTheAnimal', new Date ('01/01/1990'));
-         newAnimal.changeName([1,2,3,4,5]); //purposly put a bad arg and know its gunna throw an err
-       } catch(err) {//so when the errors thrown need to catch it here
+          let newAnimal = new window.zoo.Animal('annyTheAnimal', new Date ('01/01/1990'));
+          newAnimal.changeName([1,2,3,4,5]); //purposly put a bad arg and know its gunna throw an err
+        } catch(err) {//so when the errors thrown need to catch it here
           if(err instanceof TypeError) {
             console.info(err.message);
             expect(err.message).to.equal('New name can not be an Array');
