@@ -31,6 +31,11 @@ window.zoo.Dinosaur = class Dinosaur extends Animal{//creating a dinosaur class 
         // 'dinoBaby' + i;
         new Dinosaur(name, new Date());
     }
+    //getAge() {
+    //let age = super.getAge();
+    //this.age = age;
+    //return age * 1.1;
+    //}
     return numbOfEggs;
   }
   roar(noise){
